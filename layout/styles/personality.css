@@ -1,0 +1,48 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.block1 {
+    flex: 0 0 calc(50% - 20px); /* Устанавливаем ширину блока в 50% с учетом отступов */
+    margin: 10px;
+    box-sizing: border-box; /* Учитываем padding в ширине блока */
+    text-align: center;
+    position: relative;
+    padding-top: 20px;
+}
+
+.image {
+    position: relative;
+}
+
+.name {
+    opacity: 0;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-transform: uppercase;
+    padding: 10px;
+    transition: opacity 0.5s ease; /* Плавное появление */
+    text-shadow: 1px 1px 2px black;
+    font-size: 35px;
+    /* Показывать при наведении */
+    pointer-events: none; /* Предотвращает блокировку событий мыши */
+}
+
+.block1:hover .name {
+    opacity: 1;
+    pointer-events: auto;  /* Включает события мыши при показе текста */
+}
+
+@media (max-width: 767px) {
+    .container {
+        flex-direction: column;  /* Устанавливаем направление в столбец для мобильной версии */
+    }
+
+    .block1 {
+        flex: 0 0 100%;  /* Устанавливаем ширину блока в 100% в мобильной версии */
+    }
+}
