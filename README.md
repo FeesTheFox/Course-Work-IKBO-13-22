@@ -1,2 +1,2 @@
-# Course-Work-IKBO-13-22 Kazakov Nikolay Andreevich
+# Course-Work
 https://feesthefox.github.io/Course-Work-IKBO-13-22/
